@@ -1,0 +1,38 @@
+.art {
+    animation-name: art_animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes art_animation {
+    0% {
+        transform: scale3d(1, 1, 1);
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: scale3d(0.6, 0.6, 0.6);
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        transform: rotate(0deg);
+    }
+}
+
+.jump {
+    animation-name: jump_animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jump_animation {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-10%)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}

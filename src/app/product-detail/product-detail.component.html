@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<body class="text-light text-center overflow-auto " style="background-color: black;">
+    <div class="container">
+        <div class="d-sm-flex align-items-center fade-effect">
+            <div class="container mt-5 justify-content-center">
+                <img style="border-radius: 5%;" [src]="prod.icon" height="200" alt="">
+                <h1>{{prod.Name}}</h1>
+                <p>{{prod.Description}}</p>
+            </div>
+            <div>
+                <a [href]="prod.DownloadLink">
+                    <button class="btn btn-danger">Download</button>
+                </a>
+            </div>
+        </div>
+        <p>App Type: {{prod.AppType}}</p>
+        <p>App Size: {{prod.AppSize}}</p>
+        <h3 class="mt-5">Screen shots</h3>
+        <div class="d-flex justify-content-between overflow-auto">
+            <div *ngFor="let screenshot of prod.screenshots">
+                <img class="mx-2" [src]="screenshot" height="300" alt="">
+            </div>
+        </div>
+        <p>Version: {{prod.version}}</p>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="text-start">
+                    <h3 class="mt-5">Whats New?</h3>
+                    <ul *ngFor="let New of prod.New">
+                        <li>
+                            <p>{{New}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="text-start">
+                    <h3 class="mt-5">Features</h3>
+                    <ul *ngFor="let feature of prod.features">
+                        <li>
+                            <p>{{feature}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p>By downloading and installing this app, your agree to our <a [href]="prod.privacyPolicyURL" style="color: blue;">privacy policy</a></p>
+
+    </div>
+
+
+</body>
+<app-footer></app-footer>

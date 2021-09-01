@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+button {
+    transition: 2s;
+}
+
+button:hover {
+    transform: scale3d(1.2, 1.2, 1.2)
+}
